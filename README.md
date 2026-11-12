@@ -7,6 +7,7 @@
 | # | 技巧 | 解决什么问题 |
 | --- | --- | --- |
 | 01 | [让 Claude 直接编辑你的 Overleaf 论文](tips/01-claude-code-edit-overleaf.md) | 不用再在 Overleaf 和 Claude 之间一句一句复制粘贴 |
+| 02 | [服务器重启后一键恢复 tmux 里的 Claude Code](tips/02-cc-tmux-restore-claude-sessions.md) | 服务器一重启，tmux 里多开的 Claude 对话全没了 |
 
 ## 约定
 
