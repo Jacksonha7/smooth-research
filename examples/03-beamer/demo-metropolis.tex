@@ -1,0 +1,96 @@
+\documentclass[aspectratio=169]{beamer}
+\usetheme{metropolis}
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning}
+
+\title{Slides as Code}
+\subtitle{Making Talks with Beamer and an AI Assistant}
+\author[J. He]{Jianxiang He}
+\institute[smooth-research]{Demo deck for the smooth-research guide}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\begin{frame}{Outline}
+  \tableofcontents
+\end{frame}
+
+\section{Motivation}
+
+\begin{frame}{Why Beamer?}
+  \begin{itemize}
+    \item One theme controls every slide: fonts, colours, spacing
+    \item Equations, citations and code look like the paper
+    \item Slides are plain text, so an AI assistant can edit them
+    \item Version control with Git, diff every change
+  \end{itemize}
+  \vspace{1em}
+  \begin{alertblock}{Key idea}
+    The AI writes \texttt{.tex}; the template decides how it looks.
+  \end{alertblock}
+\end{frame}
+
+\begin{frame}{Equations come for free}
+  A standard attention layer, typeset exactly as in the paper:
+  \begin{equation*}
+    \mathrm{Attention}(Q,K,V) = \mathrm{softmax}\!\left(\frac{QK^\top}{\sqrt{d_k}}\right)V
+  \end{equation*}
+  \begin{columns}[T]
+    \begin{column}{0.48\textwidth}
+      \begin{block}{In PowerPoint}
+        Equation editor, screenshots, manual alignment.
+      \end{block}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \begin{exampleblock}{In Beamer}
+        Copy the LaTeX from your paper.
+      \end{exampleblock}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\section{Workflow}
+
+\begin{frame}{The pipeline}
+  \centering
+  \begin{tikzpicture}[
+      node distance=10mm,
+      box/.style={draw, rounded corners, minimum width=26mm, minimum height=11mm, align=center, font=\small},
+      arr/.style={-{Latex[length=2.5mm]}, thick}]
+    \node[box] (a) {Search\\``beamer + school''};
+    \node[box, right=of a] (b) {Open the\\template};
+    \node[box, right=of b] (c) {AI fills in\\\texttt{.tex}};
+    \node[box, right=of c, fill=mLightGreen!20] (d) {Compile\\to PDF};
+    \draw[arr] (a) -- (b);
+    \draw[arr] (b) -- (c);
+    \draw[arr] (c) -- (d);
+  \end{tikzpicture}
+  \vspace{1.2em}
+
+  \small Every step is text, so every step can be reviewed and undone.
+\end{frame}
+
+\begin{frame}{PowerPoint vs.\ Beamer}
+  \centering
+  \begin{tabular}{@{}lll@{}}
+    \toprule
+    & AI-generated PPT & AI + Beamer template \\
+    \midrule
+    Layout      & decided by the AI      & fixed by the template \\
+    Fonts, colours & often inconsistent  & one theme, every slide \\
+    Equations   & images or plain text   & native LaTeX \\
+    Editing     & click and drag         & edit text, recompile \\
+    Review      & look at each slide     & read the diff \\
+    \bottomrule
+  \end{tabular}
+\end{frame}
+
+\begin{frame}[standout]
+  Questions?
+\end{frame}
+
+\end{document}

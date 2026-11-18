@@ -8,6 +8,7 @@
 | --- | --- | --- |
 | 01 | [让 Claude 直接编辑你的 Overleaf 论文](tips/01-claude-code-edit-overleaf.md) | 不用再在 Overleaf 和 Claude 之间一句一句复制粘贴 |
 | 02 | [服务器重启后一键恢复 tmux 里的 Claude Code](tips/02-cc-tmux-restore-claude-sessions.md) | 服务器一重启，tmux 里多开的 Claude 对话全没了 |
+| 03 | [用 Beamer 让 AI 做出不带"AI 味"的汇报幻灯片](tips/03-beamer-slides-with-ai.md) | AI 直接做的 PPT 容易出错、风格不正式 |
 
 ## 约定
 
