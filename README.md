@@ -15,6 +15,7 @@
 | # | 文章 | 适合谁看 |
 | --- | --- | --- |
 | 01 | [非主流申博经验分享](experience/01-unconventional-phd-application.md) | 申请季没有一作、套磁没回音、正在焦虑的同学 |
+| 02 | [我是怎么学一门完全没学过的课的](experience/02-how-i-learn-a-new-subject.md) | 学新课、进新领域时觉得学了很多却串不起来的同学 |
 
 ## 约定
 
